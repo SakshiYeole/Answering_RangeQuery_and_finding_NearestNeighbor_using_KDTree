@@ -52,5 +52,6 @@ def rangeQ(points, xlm, ylm, xmin, xmax, ymin, ymax):
     for point in result:
         print(point)
         plt.plot(point[0], point[1], 'bs', ms = 10)
+        plt.text(point[0], point[1], 'Rangepoint', fontsize=12, color='black', ha='center', va='top')
 
     plt.show()

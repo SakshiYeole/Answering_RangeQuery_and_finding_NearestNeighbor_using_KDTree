@@ -46,6 +46,7 @@ def findNN(points, query_point, xlm, ylm):
     plt.xlim(0, xlm)
     plt.ylim(0, ylm)
     plt.plot(query_point[0], query_point[1], 'b*') 
+    plt.text(query_point[0], query_point[1], 'Query Point', fontsize=12, color='black', ha='center', va='top')
 
     # visualize the k-d tree
     build.visualize_kdtree(root, 0, xlm, 0, ylm)
@@ -55,5 +56,7 @@ def findNN(points, query_point, xlm, ylm):
         plt.plot(point[0], point[1], 'ro')
 
     plt.plot(query_point[0], query_point[1], 'b*')
+    plt.text(query_point[0], query_point[1], 'Query Point', fontsize=12, color='black', ha='center', va='top')
     plt.plot(nearest_neighbor[0], nearest_neighbor[1], 'cs', ms = 10)
+    plt.text(nearest_neighbor[0], nearest_neighbor[1], 'Nearest Neighbor', fontsize=12, color='black', ha='center', va='top')
     plt.show() 
